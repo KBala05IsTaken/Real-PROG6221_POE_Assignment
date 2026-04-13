@@ -10,9 +10,9 @@ class program
     {
         //ASCII Title for the
         Console.WriteLine("===================================");
-
+         
         // ASCII Art Text
-        Console.ForegroundColor = ConsoleColor.Blue;
+        Console.ForegroundColor = ConsoleColor.Blue;//Changes the ASCII title to blue
         Console.WriteLine("    _    ___      _           _        _   ");
         Console.WriteLine("   / \\  |_ _|    / \\   ___ __(_)___   / |_ ");
         Console.WriteLine("  / _ \\  | |    / _ \\ / __/ __| / __| | __|");
@@ -23,15 +23,17 @@ class program
         Console.WriteLine("        AI Assistant");
         String sName = "";
 
-        InputtingName(sName);
+        InputtingName(sName);//Uses a method to get the user's name
         
 
-        //Options
+        //Asks for the user's name
         Console.WriteLine("------------------------------------");
         Console.WriteLine("");
         Console.WriteLine("Alright then " + sName + ", What would you like to do? (Only type in the number on your keyboard)");
         Console.WriteLine();
 
+
+        //Based on the different number the user chooses the bot will give a differnt result
         Console.ForegroundColor = ConsoleColor.Yellow;
         Console.WriteLine("(1) How do you feel?");
         Console.WriteLine("(2) What is your purpose?");
@@ -42,7 +44,7 @@ class program
         Console.WriteLine("");
 
         switch (sAnswer1)
-        {
+        {   //Choi
             case "1":
                 Console.WriteLine("------------------------------------");
                 Console.ForegroundColor = ConsoleColor.Blue;
@@ -103,13 +105,17 @@ class program
                             "like malware, unwanted software, and social engineering across desktop and mobile platforms.");
                         Console.ResetColor();
                         break;
+
+                    default:
+                        Console.WriteLine("------------------------------------");
+                        Console.WriteLine("Error: Sorry, I couldn't really determine your answer of " + sAnswer2);
+                        break;
                 }
                 break;
 
             default:
                 Console.WriteLine("------------------------------------");
-                Console.WriteLine("Error: Sorry, I couldn't really determine your answer of " + sAnswer1 +
-                    ". Could you please rephrase your answer.");
+                Console.WriteLine("Error: Sorry, I couldn't really determine your answer of " + sAnswer1);
                 break;
         }
 
@@ -127,4 +133,6 @@ class program
         Console.WriteLine("Wow, " + name + " Sounds like a great name");
     }
 }
+
+
 
