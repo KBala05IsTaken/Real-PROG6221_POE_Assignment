@@ -56,7 +56,41 @@ class program
 
             case "3":
                 Console.WriteLine("------------------------------------");
+                Console.WriteLine("Okay then " +sName+ ", what would you like to know about?");
                 Console.WriteLine("");
+
+                Console.WriteLine("(1) Password safety");
+                Console.WriteLine("(2) Phishing");
+                Console.WriteLine("(3) Safe browsing");
+                Console.Write("Enter here: ");
+                String sAnswer2 = Console.ReadLine();
+                Console.WriteLine("");
+
+                switch(sAnswer2)
+                {
+                    case "1":
+                        Console.WriteLine("------------------------------------");
+                        Console.WriteLine("Password safety refers to the collection of practices and " +
+                            "technologies used to protect your accounts from unauthorized access. " +
+                            "It serves as your primary line of defense against hackers who attempt to steal " +
+                            "personal information, identity, or money.");
+                        break;
+
+                    case "2":
+                        Console.WriteLine("------------------------------------");
+                        Console.WriteLine("Phishing is a cyberattack where scammers impersonate trusted " +
+                            "entities via email, text, or phone to steal sensitive information—passwords, " +
+                            "credit card numbers, or bank details. Attackers use urgent, alarming messages to " +
+                            "trick victims into clicking malicious links, downloading malware, or visiting fake websites.");
+                        break;
+
+                    case "3":
+                        Console.WriteLine("------------------------------------");
+                        Console.WriteLine("Safe Browsing launched in 2005 to protect users across the web from phishing " +
+                            "attacks, and has evolved to give users tools to help protect themselves from web-based threats " +
+                            "like malware, unwanted software, and social engineering across desktop and mobile platforms.");
+                        break;
+                }
                 break;
 
             default:
